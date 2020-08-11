@@ -1,12 +1,11 @@
 package com.shomai.tictactoe_multiplayerofflinetictactoegame
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val playerTwo = playerTwoName.text.toString()
         if (playerOne.isEmpty() || playerTwo.isEmpty()) {
             Toast.makeText(applicationContext, "Consider Input not empty", Toast.LENGTH_SHORT)
-                .show();
+                .show()
         } else {
             if (playerOne == playerTwo) {
                 Toast.makeText(
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                     "Are you Playing with your self ?",
                     Toast.LENGTH_SHORT
                 )
-                    .show();
+                    .show()
             } else {
                 val boardIntent = Intent(this, BoardActivity::class.java).apply {
                     putExtra("playerOne", playerOne)

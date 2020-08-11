@@ -1,150 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".BoardActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/playerOnplayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="waiting for player"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
+    <data>
 
-    <TextView
-        android:id="@+id/turnText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="0.297" />
+        <variable
+            name="player1Name"
+            type="String" />
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <variable
+            name="player2Name"
+            type="String" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <variable
+            name="turnStatus"
+            type="String" />
+    </data>
 
-            <Button
-                android:id="@+id/b1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BoardActivity">
 
-            <Button
-                android:id="@+id/b2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
+        <TextView
+            android:id="@+id/playerOnplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{player1Name + ` VS ` + player2Name}"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
 
-            <Button
-                android:id="@+id/b3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
-        </TableRow>
+        <TextView
+            android:id="@+id/turnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{turnStatus}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+            app:layout_constraintVertical_bias="0.297" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/b4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/b5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
+                <Button
+                    android:id="@+id/b1"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="0" />
 
-            <Button
-                android:id="@+id/b6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
-        </TableRow>
+                <Button
+                    android:id="@+id/b2"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="1" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/b3"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="2" />
+            </TableRow>
 
-            <Button
-                android:id="@+id/b7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/b8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
+                <Button
+                    android:id="@+id/b4"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="3" />
 
-            <Button
-                android:id="@+id/b9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:tag="active"
-                android:onClick="btnClick"
-                android:height="100dp"
-                style="?attr/materialButtonOutlinedStyle"/>
-        </TableRow>
+                <Button
+                    android:id="@+id/b5"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="4" />
 
-    </TableLayout>
+                <Button
+                    android:id="@+id/b6"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="5" />
+            </TableRow>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/b7"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="6" />
+
+                <Button
+                    android:id="@+id/b8"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="7" />
+
+                <Button
+                    android:id="@+id/b9"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:height="100dp"
+                    android:onClick="btnClick"
+                    android:tag="8" />
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
