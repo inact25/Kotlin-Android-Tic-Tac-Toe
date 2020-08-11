@@ -23,7 +23,7 @@ class BoardActivity : AppCompatActivity() {
        val mybtn = v as Button
          playGame(mybtn)
     }
-    fun playGame(mybtn:Button) {
+    private fun playGame(mybtn:Button) {
         if (playerOne){
             mybtn.text = "X"
             playerOne = !playerOne

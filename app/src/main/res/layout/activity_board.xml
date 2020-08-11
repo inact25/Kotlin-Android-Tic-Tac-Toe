@@ -51,7 +51,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
                 android:id="@+id/b2"
@@ -60,7 +61,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
                 android:id="@+id/b3"
@@ -69,7 +71,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
         </TableRow>
 
         <TableRow
@@ -83,7 +86,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
                 android:id="@+id/b5"
@@ -92,7 +96,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
                 android:id="@+id/b6"
@@ -101,7 +106,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
         </TableRow>
 
         <TableRow
@@ -115,7 +121,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
                 android:id="@+id/b8"
@@ -124,7 +131,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
                 android:id="@+id/b9"
@@ -133,7 +141,8 @@
                 android:width="100dp"
                 android:tag="active"
                 android:onClick="btnClick"
-                android:height="100dp" />
+                android:height="100dp"
+                style="?attr/materialButtonOutlinedStyle"/>
         </TableRow>
 
     </TableLayout>
