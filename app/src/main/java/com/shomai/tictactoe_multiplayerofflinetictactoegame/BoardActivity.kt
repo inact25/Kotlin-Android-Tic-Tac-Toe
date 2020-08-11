@@ -71,12 +71,10 @@ class BoardActivity : AppCompatActivity() {
         val condList: Array<Boolean> =
             arrayOf(cond1, cond2, cond3, cond4, cond5, cond6, cond7, cond8)
 
-        for (i in condList) {
-            if (i) {
-                Toast.makeText(applicationContext, "Win", Toast.LENGTH_SHORT)
-                    .show()
-                return
-            }
+        for (i in condList) if (i) {
+            Toast.makeText(applicationContext, "Win", Toast.LENGTH_SHORT)
+                .show()
+            return
         }
     }
 }
